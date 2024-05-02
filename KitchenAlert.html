@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New Order Alert</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+        #alert {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: green;
+            color: rgb(59, 59, 59);
+            font-size: 48px;
+            animation: flash 2s infinite alternate;
+        }
+        @keyframes flash {
+            from { background-color: rgba(143, 143, 143, 0.993); }
+            to { background-color: rgb(75, 218, 82); }
+        }
+    </style>
+    <script>
+        function redirectToKitchen() {
+            window.location.href = 'kitchen.html'; // URL of your kitchen orders page
+        }
+        document.addEventListener('mousemove', redirectToKitchen);
+    </script>
+</head>
+<body>
+    <div id="alert">New Order</div>
+</body>
+</html>
